@@ -23,7 +23,7 @@ describe('Signup', () => {
 
     it('não deve cadastrar com instagram duplicado', ()=> {
         const user = {
-            name: 'Erick Jacquin',
+            name: 'Érick Jacquin',
             instagram: '@jacquin',
             password: 'pwd123'
         }
