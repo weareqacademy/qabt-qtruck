@@ -1,0 +1,166 @@
+#page-signup {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-signup .wrapper-logo-qtruck {
+    position: absolute;
+    z-index: 10;
+}
+
+#page-signup .content-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    height: 100%;
+    max-height: 680px;
+
+    margin-left: 35px;
+    margin-right: 35px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    background: url('../../images/brand.svg') no-repeat 100% center;
+    transition: background 0.2s;
+}
+
+#page-signup .content-wrapper img {
+    margin-bottom: 40px;
+}
+
+#page-signup .content-wrapper main {
+    max-width: 500px;
+}
+
+#page-signup .content-wrapper main h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 48px;
+    margin-bottom: 10px;
+}
+
+form.signup-form {
+    width: 250px;
+}
+
+form.signup-form .input-block+.input-block {
+    margin-top: 14px;
+}
+
+form.signup-form .input-block input {
+  width: 100%;
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 8px;
+  outline: none;
+  color: #5C8599;
+  height: 54px;
+  padding: 0 16px;
+}
+
+form.signup-form button {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    bottom: 0;
+
+    width: 120px;
+    height: 40px;
+
+    border-radius: 8px;
+    transition: background-color 0.2s;
+
+    background: #ffd666;
+    border: 1px solid #e7bf52;
+}   
+
+form.signup-form button:hover {
+    background: #e7bf52;
+}
+
+#page-signup .content-wrapper main small a {
+    color: #ffd666;
+}
+/* MEDIA QUERY */
+
+@media (max-width: 1050px) {
+    #page-signup .content-wrapper {
+        max-height: 750px;
+        align-items: center;
+        background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+        text-align: center;
+    }
+
+    #page-signup .content-wrapper img {
+        margin-top: 0;
+    }
+
+    #page-signup .content-wrapper main {
+        max-width: 450px;
+        display: block;
+    }
+
+    #page-signup .content-wrapper main h1 {
+        font-size: 55px;
+    }
+
+    #page-signup .content-wrapper main p {
+        font-size: 26px;
+    }
+
+    form.signup-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    #page-signup .content-wrapper {
+        max-height: 900px;
+
+        display: flex;
+        align-items: center;
+        background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+    }
+
+    #page-signup .content-wrapper img {
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    #page-signup .content-wrapper main {
+        display: block;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    #page-signup .content-wrapper main h1 {
+        font-size: 36px;
+        line-height: 35px;
+    }
+
+    #page-signup .content-wrapper main p {
+        margin-top: 5px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    form.signup-form {
+        width: 100%;
+    }
+
+    form.signup-form h2 {
+        font-size: 20px;
+    }
+}

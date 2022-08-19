@@ -1,0 +1,169 @@
+#page-map {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+}
+
+#page-map aside {
+    width: 440px;
+    background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page-map aside h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+    color: #fff;
+}
+
+#page-map aside p {
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+#page-map aside footer {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 24px;
+}
+
+#page-map aside footer strong{
+    font-weight: 800;
+}
+
+#page-map .leaflet-container {
+    z-index: 5;
+}
+
+#page-map .create-foodtruck {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    z-index: 10;
+
+    width: 64px;
+    height: 64px;
+    background: #EF5350;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-map .create-foodtruck:hover {
+    background: #D32F2F;
+}
+
+#page-map .map-popup .leaflet-popup-content-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+#page-map .map-popup .leaflet-popup-content {
+    color: #ea1d2c;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-map .map-popup .leaflet-popup-content a {
+    width: 40px;
+    height: 40px;
+    background: #EF5350;
+    box-shadow: 17.2868px 27.6589px 41.4884 rgba(23, 142, 166, 0.16);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-map .map-popup .leaflet-popup-tip-container {
+    display: none;
+}
+
+#page-map footer .back {
+    text-decoration: none;
+    font-weight: 800;
+    color: #fff;
+}
+
+#page-map footer .back:visited {
+    text-decoration: none;
+}
+
+#page-map footer .back:hover  {
+    text-decoration: none;
+    color: rgb(238, 238, 238)  ;
+}
+
+#page-map footer .back:active {
+    text-decoration: none;
+}
+
+#page-map footer .logout {
+    cursor: pointer;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 720px) {
+    #page-map {
+        flex-direction: column-reverse;
+
+        border-bottom: 50px;
+    }
+    
+    #page-map aside {
+        width: 100%;
+        padding: 15px 0 15px 0;
+
+        text-align: center;
+    }
+
+    #page-map aside img{
+        width: 50px;
+    }
+
+    #page-map aside h2 {
+        font-size: 20px;
+        line-height: 20px;
+
+        margin-top: 10px;
+    }
+    
+    #page-map aside p {
+        font-size: 14px;
+        line-height: 16px;
+
+        margin-top: 10px;
+    }
+
+    #page-map aside footer {
+        margin-top: 10px;
+              
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    #page-map .create-foodtruck {
+        right: 10px;
+        top: 10px;
+    }
+}

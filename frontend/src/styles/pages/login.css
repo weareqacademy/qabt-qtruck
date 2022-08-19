@@ -1,0 +1,173 @@
+#page-login {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-login .wrapper-logo-qtruck {
+    position: absolute;
+    z-index: 10;
+}
+
+#page-login .content-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    height: 100%;
+    max-height: 680px;
+
+    margin-left: 35px;
+    margin-right: 35px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    background: url('../../images/brand.svg') no-repeat 100% center;
+    transition: background 0.2s;
+}
+
+#page-login .content-wrapper img {
+    margin-bottom: 40px;
+}
+
+#page-login .content-wrapper main {
+    max-width: 500px;
+}
+
+#page-login .content-wrapper main h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+form.login-form {
+    width: 250px;
+}
+
+form.login-form h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+form.login-form .input-block+.input-block {
+    margin-top: 14px;
+}
+
+form.login-form .input-block input {
+  width: 100%;
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 8px;
+  outline: none;
+  color: #5C8599;
+  height: 54px;
+  padding: 0 16px;
+}
+
+form.login-form button {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    bottom: 0;
+
+    width: 120px;
+    height: 40px;
+
+    border-radius: 8px;
+    transition: background-color 0.2s;
+
+    background: #ffd666;
+    border: 1px solid #e7bf52;
+}   
+
+form.login-form button:hover {
+    background: #e7bf52;
+}
+
+#page-login .content-wrapper main small a {
+    color: #ffd666;
+}
+/* MEDIA QUERY */
+
+@media (max-width: 1050px) {
+    #page-login .content-wrapper {
+        max-height: 750px;
+        align-items: center;
+        background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+        text-align: center;
+    }
+
+    #page-login .content-wrapper img {
+        margin-top: 0;
+    }
+
+    #page-login .content-wrapper main {
+        max-width: 450px;
+        display: block;
+    }
+
+    #page-login .content-wrapper main h1 {
+        font-size: 55px;
+    }
+
+    #page-login .content-wrapper main p {
+        font-size: 26px;
+    }
+
+    form.login-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    #page-login .content-wrapper {
+        max-height: 900px;
+
+        display: flex;
+        align-items: center;
+        background: linear-gradient(329.54deg, #D32F2F 0%, #EF5350 100%);
+    }
+
+    #page-login .content-wrapper img {
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    #page-login .content-wrapper main {
+        display: block;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    #page-login .content-wrapper main h1 {
+        font-size: 36px;
+        line-height: 35px;
+    }
+
+    #page-login .content-wrapper main p {
+        margin-top: 5px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    form.login-form {
+        width: 100%;
+    }
+
+    form.login-form h2 {
+        font-size: 20px;
+    }
+}

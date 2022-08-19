@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background: #ebf2f5;
+}
+
+body, input, button, textarea {
+    font: 600 18px Nunito, sans-serif;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 46px;
+    color: #4D6F80;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 26px;
+    line-height: 46px;
+    color: #4D6F80;
+}
+
+.loading {
+    color: #4D6F80;
+  }
+
+.swal2-styled.swal2-confirm {
+    background-color: #EF5350 !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: 0 0 0 3px rgb(239 83 80 / 50%) !important;
+}
