@@ -49,6 +49,9 @@ export default function CreateFoodTruck() {
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
 
+    localStorage.setItem('qtruck:latitude', String(lat))
+    localStorage.setItem('qtruck:longitude', String(lng))
+
     setPosition({
       latitude: lat,
       longitude: lng
@@ -58,7 +61,9 @@ export default function CreateFoodTruck() {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
-    const { latitude, longitude } = position;
+    //const { latitude, longitude } = position;
+    const latitude = localStorage.getItem('qtruck:latitude')
+    const longitude = localStorage.getItem('qtruck:longitude')
 
     if (!latitude || !longitude) {
       return swal.fire({
