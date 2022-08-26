@@ -29,4 +29,14 @@ describe('Recomendação', () => {
         createPage.modal.haveText('Food truck cadastrado com sucesso!')
     })
 
+    it('não deve cadastrar foodtruck com o nome duplicado', ()=> {
+        // 1 - a massa de testes deve ser independente
+        // 2 - latitude e longitude deve ser única
+        // 3 - você deve encontrar e corrigir o bug
+    })
+
+    it('todos os campos são obrigatórios', ()=> {
+
+    })
+
 })
