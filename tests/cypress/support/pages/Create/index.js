@@ -10,13 +10,7 @@ class CreatePage {
     form(foodtruck) {
         cy.setGeolocation(foodtruck.latitude, foodtruck.longitude)
 
-        //label[text()="Nome *"]/..//input
-
-        cy.contains('label', 'Nome')
-            .parent()
-            .find('input').type(foodtruck.name)
-
-        // cy.get('input[name=name]').type(foodtruck.name)
+        cy.get('input[name=name]').type(foodtruck.name)
         cy.get('textarea[name=details]').type(foodtruck.details)
         cy.get('input[name=opening-hours]').type(foodtruck.opening_hours)
 
