@@ -30,13 +30,54 @@ describe('Recomendação', () => {
     })
 
     it('não deve cadastrar foodtruck com o nome duplicado', ()=> {
-        // 1 - a massa de testes deve ser independente
-        // 2 - latitude e longitude deve ser única
-        // 3 - você deve encontrar e corrigir o bug
+        const user = {
+            name: 'Margaret',
+            instagram: '@margaret',
+            password: 'pwd123'
+        }
+
+        const foodtruck = {
+            latitude: '-23.583654062428796',
+            longitude: '-46.67752861976624',
+            name: 'Churros da Dona Florinda',
+            details: 'O melhor churros mexicado da região.',
+            opening_hours: 'das 15h às 19h',
+            open_on_weekends: false
+        }
+
+        cy.apiCreateUser(user)
+        cy.apiLogin(user)
+        cy.apiCreateFoodTruck(foodtruck)
+
+        cy.uiLogin(user)
+        
+        mapPage.createLink()
+        createPage.form(foodtruck)
+        createPage.submit()
+        createPage.modal.haveText('Esse food truck já foi cadastrado!')
     })
 
     it('todos os campos são obrigatórios', ()=> {
+        const user = {
+            name: 'Mordecai',
+            instagram: '@mordecai',
+            password: 'pwd123'
+        }
 
+        const foodtruck = {
+            latitude: '-23.584548837854058',
+            longitude: '-46.674446913517876',
+        }
+
+        cy.apiCreateUser(user)
+        cy.uiLogin(user)
+
+        mapPage.createLink()
+        cy.setGeolocation(foodtruck.latitude, foodtruck.longitude)
+        createPage.submit()
+
+        const message = 'Os campos nome, descrição e horário de funcionamento devem ser informados para recomendar um food truck!'
+        createPage.modal.haveText(message)
     })
 
 })
