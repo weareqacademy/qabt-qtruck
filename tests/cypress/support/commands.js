@@ -80,7 +80,7 @@ Cypress.Commands.add('apiCreateFoodTruck', (payload)=> {
 })
 
 Cypress.Commands.add('uiLogin', (user)=> {
-    loginPage.go()
+    loginPage.go('-23.584548837854058', '-46.674446913517876')
     loginPage.form(user)
     loginPage.submit()
 
