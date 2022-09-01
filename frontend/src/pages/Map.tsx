@@ -98,7 +98,6 @@ function FoodtrucksMap() {
               key={foodtruck._id}
               icon={mapIcon}
               position={[foodtruck.latitude, foodtruck.longitude]}
-              alt={foodtruck.name}
             >
               <Popup
                 closeButton={false}
