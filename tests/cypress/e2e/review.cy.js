@@ -1,4 +1,6 @@
 
+import mapPage from '../support/pages/Map'
+import foodTruckPage from '../support/pages/Foodtruck'
 
 describe('Avalidações', ()=> {
 
@@ -19,13 +21,19 @@ describe('Avalidações', ()=> {
             open_on_weekends: false
         }
 
+        const review = {
+            comment: 'O suco de limão estava muito bom, mas veio muito pouco.',
+            stars: 4
+        }
+
         cy.apiCreateUser(user)
         cy.apiLogin(user)
         cy.apiCreateFoodTruck(foodtruck)
 
         cy.uiLogin(user)
 
-        cy.wait(10000)
+        mapPage.goToFoodtruck(foodtruck.name)
+        foodTruckPage.addReview(review)
 
     })
 

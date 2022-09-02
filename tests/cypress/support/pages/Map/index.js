@@ -16,6 +16,14 @@ class MapPage {
             .click()
     }
 
+    goToFoodtruck(footruckName) {
+        cy.get(`img[alt="${footruckName}"]`)
+        .should('be.visible')
+        .click({force: true})
+    
+    cy.get('.leaflet-popup-content a').click()
+    }
+
 }
 
 export default new MapPage()

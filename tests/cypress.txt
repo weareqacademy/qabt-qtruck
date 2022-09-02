@@ -1,0 +1,22 @@
+        // cy.get('.leaflet-marker-pane img').as('mapList')
+
+        // cy.get('@mapList').each((element, index, list)=> {
+
+        //     cy.get('@mapList')
+        //         .eq(index)
+        //         .click({force: true})
+        //     cy.wait(1000)
+
+        //     cy.get('.leaflet-popup-content').as('ftName')
+
+        //     cy.get('@ftName')
+        //         .invoke('text')
+        //         .then((txt)=> {
+        //             cy.log(txt)
+        //             if (txt === foodtruck.name) {
+        //                 cy.get('@ftName').find('a').click()
+        //                 return false
+        //             }
+        //         })
+
+        // })
