@@ -37,5 +37,3 @@ describe('Signup', () => {
         signupPage.modal.haveText('Instagram já cadastrado!')
     })
 })
-
-
