@@ -14,6 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+require('@shelex/cypress-allure-plugin')
+
 import './commands'
 
 const mongo = require('cypress-mongodb')

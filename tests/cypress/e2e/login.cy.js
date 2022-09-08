@@ -2,12 +2,18 @@ import loginPage from '../support/pages/Login'
 import mapPage from '../support/pages/Map'
 
 describe('Login', () => {
-  it('deve logar com sucesso', () => {
-    const user = {
-      name: 'Fernando',
-      instagram: '@papitorocks',
-      password: 'pwd123'
-    }
+
+  beforeEach(()=> {
+    cy.fixture('login-users').then(function (users){
+      this.users = users
+    })
+  })
+
+  it.only('deve logar com sucesso', function () {
+
+    const user = this.users.success
+
+    cy.apiCreateUser(user)
 
     loginPage.go()
     loginPage.form(user)
@@ -16,11 +22,8 @@ describe('Login', () => {
     mapPage.loggedUser(user.name)
   })
 
-  it('nao deve logar com senha invalida', () => {
-    const user = {
-      instagram: '@papitorocks',
-      password: '123456'
-    }
+  it('nao deve logar com senha invalida', function () {
+    const user = this.users.inv_pass
 
     loginPage.go()
     loginPage.form(user)
@@ -29,11 +32,8 @@ describe('Login', () => {
     loginPage.modal.haveText('Credenciais inválidas, tente novamente!')
   })
 
-  it('nao deve logar instagram inexistente', () => {
-    const user = {
-      instagram: '@rockspapito',
-      password: '123456'
-    }
+  it('nao deve logar instagram inexistente', function () {
+    const user = this.users.not_found
 
     loginPage.go()
     loginPage.form(user)
@@ -42,10 +42,8 @@ describe('Login', () => {
     loginPage.modal.haveText('Credenciais inválidas, tente novamente!')
   })
 
-  it('instagram deve ser obrigatório', ()=> {
-    const user = {
-      password: 'pwd123'
-    }
+  it('instagram deve ser obrigatório', function () {
+    const user = this.users.required_insta
 
     loginPage.go()
     loginPage.form(user)
@@ -54,10 +52,8 @@ describe('Login', () => {
     loginPage.modal.haveText('Por favor, informe o seu código do Instagram!')
   })
 
-  it('senha deve ser obrigatória', ()=> {
-    const user = {
-      instagram: '@joao'
-    }
+  it('senha deve ser obrigatória', function () {
+    const user = this.users.required_pass
 
     loginPage.go()
     loginPage.form(user)
@@ -66,7 +62,7 @@ describe('Login', () => {
     loginPage.modal.haveText('Por favor, informe a sua senha secreta!')
   })
 
-  it('todos os campos devem ser obrigatórios', ()=> {
+  it('todos os campos devem ser obrigatórios', function () {
     loginPage.go()
     loginPage.submit()
 

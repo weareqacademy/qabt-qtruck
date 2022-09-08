@@ -1,0 +1,21 @@
+{
+    "success": {
+        "name": "Fernando",
+        "instagram": "@papitoio",
+        "password": "pwd123"
+    },
+    "inv_pass": {
+        "instagram": "@papitoio",
+        "password": "abc123"
+    },
+    "not_found": {
+        "instagram": "@notfound",
+        "password": "pwd123"
+    },
+    "required_insta": {
+        "password": "pwd123"
+    },
+    "required_pass": {
+        "instagram": "@papitotest"
+    }
+}
