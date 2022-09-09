@@ -2,3 +2,4 @@ node_modules
 downloads
 allure-results
 cypress/videos
+cypress/screenshots
