@@ -17,7 +17,8 @@ class SignupPage {
     }
 
     submit() {
-        cy.contains('button', 'Cadastrar').click()
+        cy.contains('button', 'Cadastrar')
+            .click({ force: true })
     }
 }
 

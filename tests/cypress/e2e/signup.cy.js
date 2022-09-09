@@ -8,10 +8,6 @@ describe('Signup', () => {
             password: 'pwd123'
         }
 
-        // cy.deleteMany({instagram: user.instagram}, {collection: 'users'}).then(res => {
-        //     cy.log(res)
-        // })
-
         cy.apiResetUser(user.instagram)
 
         signupPage.go()

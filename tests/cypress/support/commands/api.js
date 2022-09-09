@@ -1,3 +1,6 @@
+
+const API_URL = Cypress.env('apiUrl')
+
 Cypress.Commands.add('apiLogin', (user)=> {
 
     const payload = {
@@ -6,7 +9,7 @@ Cypress.Commands.add('apiLogin', (user)=> {
     }
 
     cy.request({
-        url: 'http://localhost:3333/sessions',
+        url: API_URL + '/sessions',
         method: 'POST',
         body: payload
     }).then(response=> {
@@ -17,7 +20,7 @@ Cypress.Commands.add('apiLogin', (user)=> {
 
 Cypress.Commands.add('apiResetUser', (instagram) => {
     cy.request({
-        url: 'http://localhost:3333/helpers-reset',
+        url: API_URL + '/helpers-reset',
         method: 'DELETE',
         qs: { instagram: instagram }
     }).then(response => {
@@ -29,7 +32,7 @@ Cypress.Commands.add('apiCreateUser', (payload)=> {
     cy.apiResetUser(payload.instagram)
 
     cy.request({
-        url: 'http://localhost:3333/signup',
+        url: API_URL + '/signup',
         method: 'POST',
         body: payload
     }).then(response => {
@@ -39,7 +42,7 @@ Cypress.Commands.add('apiCreateUser', (payload)=> {
 
 Cypress.Commands.add('apiCreateFoodTruck', (payload)=> {
     cy.request({
-        url: 'http://localhost:3333/foodtrucks',
+        url: API_URL + '/foodtrucks',
         method: 'POST',
         headers: {
             'Authorization': Cypress.env('token')
